@@ -1,0 +1,118 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+\documentclass[aspectratio=169,xcolor=dvipsnames, 10pt]{beamer}
+\usetheme{USCViterbi}
+
+
+\usepackage{hyperref}
+\usepackage{animate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dashbox}
+\usepackage{minted}
+\usepackage{subcaption}
+\usepackage{graphicx} % Allows including images
+\usepackage[export]{adjustbox} % Allow trimming images
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{hf-tikz}
+\usetikzlibrary{tikzmark, positioning, fit, shapes.geometric, matrix}
+\usetikzlibrary{matrix}
+\usetikzlibrary{shadows}
+\usetikzlibrary{shapes.arrows}
+\usepackage{biblatex}
+\usepackage{media9}%
+\usepackage[absolute,overlay]{textpos}
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{array, tabularx}
+\usepackage[most]{tcolorbox}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\usepackage{ulem}
+\usepackage[thicklines]{cancel}
+\renewcommand{\CancelColor}{\color{USCCardinal}}
+\newcommand<>{\xxcancel}[1]{\alt#2{\xcancel{#1}\vphantom{#1}}{#1}}
+\newcommand<>{\xboxed}[1]{\alt#2{\dboxed{#1}}{#1}}
+
+\addbibresource{references.bib}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+% The title
+\title[short title]{long title goes here}
+\subtitle{if you have subtitle it goes here}
+
+\author {} % your name goes here
+\institute[University of Southern California] % Your institution may be shorthand to save space
+{
+    % Your institution for the title page
+    Department of xxx, Viterbi School of Engineering \\
+    University of Southern California
+
+}
+\date{\today} % Date, can be changed to a custom date
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{frame}
+    % Print the title page as the first slide
+    \titlepage
+    
+    \begin{center}
+    \small
+        Other information you would like to provide goes here like funding sources
+    \end{center}
+\end{frame}
+
+% if you do not want tableofcontents at beginning of subsections
+% comment the following out
+\AtBeginSubsection[]
+{
+    \begin{frame}<beamer>{Table of Contents}
+        \tableofcontents[currentsection,currentsubsection,hideothersubsections,sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+    \end{frame}
+}
+
+% if you do not want tableofcontents at beginning of sections
+% comment the following out
+\AtBeginSection[]
+{
+    \begin{frame}<beamer>{Table of Contents}
+        \tableofcontents[currentsection,sectionstyle=show/shaded, subsectionstyle=hide]
+    \end{frame}
+}
+
+
+% if you do not want tableofcontents at beginning of the whole docs
+% comment the following out
+%\begin{frame}<beamer>{Table of Contents}
+%    \tableofcontents[sectionstyle=show,subsectionstyle=hide]
+%\end{frame}
+
+\include{Content}
+
+\section*{Questions}
+\begin{frame}[t]
+\frametitle{Bibliography}
+\printbibliography
+\end{frame}
+
+\section*{Questions}
+\begin{frame}
+\begin{center}
+    \Large
+    \textbf{Whatever you want to put in the last frames, like questions}
+\end{center}
+\end{frame}
+
+\end{document}

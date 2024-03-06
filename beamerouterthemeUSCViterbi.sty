@@ -1,0 +1,49 @@
+% Created by Hang Yu, Aug 2021.
+
+\mode<presentation>
+\usecolortheme{USC}
+
+\setbeamercolor*{white on cardinal}{bg=USCCardinal, fg=white}
+\setbeamercolor*{white on gold}{bg=USCGold, fg=white}
+\setbeamercolor*{gold on cardinal}{bg=USCCardinal, fg=USCGold}
+
+
+
+\setbeamertemplate{page number in foot}[totalframenumber]%
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+  \leavevmode
+  \vbox{
+    \relax
+    \begin{beamercolorbox}[wd=\paperwidth,ht=0.004\paperwidth]{white on gold}%
+    \end{beamercolorbox}%
+  
+    \hbox{\relax
+        \begin{beamercolorbox}[wd=.15\paperwidth,ht=.036\paperwidth,dp=1ex,center]{white on cardinal}%
+            \includegraphics[width=.1\paperwidth]{Formal_Viterbi_GoldOntrans.eps}
+        \end{beamercolorbox}%
+  
+        \begin{beamercolorbox}[wd=.60\paperwidth,ht=.036\paperwidth,dp=1ex,center]{white on cardinal}%
+        \end{beamercolorbox}%
+  
+        \vbox{\relax
+            \begin{beamercolorbox}[wd=.25\paperwidth,ht=.018\paperwidth,dp=0ex,center]{white on cardinal}%
+                \insertframenumber\,/\,\inserttotalframenumber\hfill
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[wd=.25\paperwidth,ht=.018\paperwidth,dp=1ex,center]{gold on cardinal}%
+                University of Southern California
+            \end{beamercolorbox}%
+        }%
+    }%
+
+    \vskip0pt%
+  
+  }%
+}
+
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>
